@@ -21,7 +21,7 @@ canvas.drawing { t in
         t.goto(-300, 150)
         t.penDown()
     
-    t.penSize(3)
+    t.penSize(4)
     
     // Draw C
     t.uppercaseC()
@@ -110,7 +110,7 @@ canvas.drawing { t in
     t.right(70)
     t.forward(3)
     t.penDown()
-    t.curve(withSides: -10, withSize: 3, drawingSides: 5)
+    t.curve(withSides: -10, withSize: 4, drawingSides: 5)
     
     //uppercaseY
     //get position right
