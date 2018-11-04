@@ -14,10 +14,14 @@ PlaygroundPage.current.liveView = canvas
 
 canvas.drawing { t in
     
+    
+    
     //start drawing name from top left corner of canvas
         t.penUp()
         t.goto(-300, 150)
         t.penDown()
+    
+    t.penSize(3)
     
     // Draw C
     t.uppercaseC()
