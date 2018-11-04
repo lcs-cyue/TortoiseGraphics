@@ -110,7 +110,7 @@ canvas.drawing { t in
     t.right(70)
     t.forward(3)
     t.penDown()
-    t.curve(withSides: -10, withSize: 4, drawingSides: 5)
+    t.curve(withSides: -10, withSize: 5, drawingSides: 5)
     
     //uppercaseY
     //get position right
