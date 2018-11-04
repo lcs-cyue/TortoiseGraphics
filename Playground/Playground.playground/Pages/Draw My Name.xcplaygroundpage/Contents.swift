@@ -109,14 +109,57 @@ canvas.drawing { t in
     t.curve(withSides: -10, withSize: 3, drawingSides: 5)
     
     //uppercaseY
+    //get position right
     t.setHeading(90)
     t.forward(50)
     t.left(90)
     t.forward(80)
-    t.right(140)
+    t.right(170)
     t.penDown()
-    t.curve(withSides: -20, withSize: 20, drawingSides: 4)
+    t.forward(15)
+    //loop
+    t.curve(withSides: -12, withSize: 13, drawingSides: 5)
+    //set position
+    t.forward(10)
+    t.setHeading(18)
+    t.forward(10)
+    t.penDown()
+    //loop down
+    t.curve(withSides: 20, withSize: -40, drawingSides: 4)
     
+    t.setHeading(0)
+    t.forward(90)
+    t.setHeading(90)
+    t.forward(110)
+   
+
+    
+    //lowercase u
+    t.right(90)
+    t.penDown()
+    t.forward(30)
+    t.penDown()
+    t.curve(withSides: -15, withSize: 10, drawingSides: 8)
+    t.setHeading(0)
+    t.penDown()
+    t.forward(30)
+    
+    
+    t.back(50)
+    t.setHeading(90)
+    t.forward(10)
+    
+    //lowercase e
+    t.setHeading(45)
+    t.penDown()
+    t.forward(60)
+    t.penUp()
+    t.right(120)
+    t.forward(9)
+    t.curve(withSides: 15, withSize: 9, drawingSides: 3)
+    t.penDown()
+    t.curve(withSides: 14, withSize: 11, drawingSides: 11)
+    t.penUp()
 }
 
 

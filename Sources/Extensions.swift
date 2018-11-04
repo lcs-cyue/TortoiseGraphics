@@ -31,7 +31,7 @@ public extension tortoise {
 
     }
 
-    func curve(withSides sideCount: t, withSize size: Double, drawingSides sideLimit: t) {
+    func curve(withSides sideCount: self, withSize size: Double, drawingSides sideLimit: self, ) {
 
         for _ in 1...sideLimit {
             self.forward(size)
@@ -119,4 +119,5 @@ public extension tortoise {
           }
     }
 
+}
 }
