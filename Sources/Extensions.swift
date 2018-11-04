@@ -1,9 +1,9 @@
-public extension Tortoise {
+public extension tortoise {
 
     func square(withSize size: Double) {
 
-        //"self" refers to anyinstance of the
-        //Tortoise class
+        //"t" refers to anyinstance of the
+        //tortoise class
         self.penDown()
 
         // Draw 4 sides of square
@@ -31,7 +31,7 @@ public extension Tortoise {
 
     }
 
-    func curve(withSides sideCount: Int, withSize size: Double, drawingSides sideLimit: Int) {
+    func curve(withSides sideCount: t, withSize size: Double, drawingSides sideLimit: t) {
 
         for _ in 1...sideLimit {
             self.forward(size)
@@ -82,6 +82,41 @@ public extension Tortoise {
         self.right(12)
         self.forward(40)
         self.left(135)
+
+        func lowercasee() {
+            self.penDown()
+            self.forward(60)
+            self.penUp()
+            self.right(120)
+            self.forward(9)
+            self.curve(withSides: 15, withSize: 9.5, drawingSides: 3)
+            self.penDown()
+            self.curve(withSides: 15, withSize: 9.5, drawingSides: 11)
+
+            func lowercasel() {
+                self.penUp()
+                self.right(30)
+                self.forward(32)
+                self.left(150)
+                self.penDown()
+                self.curve(withSides: -30, withSize: 20, drawingSides: 5)
+                self.left(80)
+                self.forward(4)
+                self.left(90)
+                self.forward(8)
+                self.right(90)
+                self.curve(withSides: 8, withSize: 5, drawingSides: 3)
+                self.penDown()
+                self.curve(withSides: 8, withSize: 5, drawingSides: 3)
+                self.penUp()
+                self.right(83)
+                self.forward(12)
+                self.left(90)
+                self.back(2)
+                self.left(-30)
+                self.penDown()
+                self.curve(withSides: -30, withSize: 20, drawingSides: 5)
+          }
     }
 
 }
