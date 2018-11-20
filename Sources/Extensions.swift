@@ -210,5 +210,47 @@ public extension Tortoise {
         self.setHeading(90)
         self.forward(10)
     }
+    func danshedCircle() {
 
+        //Adjust course to the left a bit
+        self.penUp()
+        self.forward(10)
+        self.right(5)
+        self.forward(10)
+        self.right(5)
+
+        //Draw a dashed circle
+        for _ in 1...36 {
+            self.penUp()
+            self.forward(9)
+            self.right(5)
+            self.penDown()
+            self.forward(11)
+            self.right(5)
+
+            self.penUp()
+            self.right(90)
+            self.backward(50)
+            self.left(90)
+            self.penDown()
+            self.penSize(2)
+
+            //Draw 18 dashed circles
+            for _ in 1...18 {
+                self.right(10)
+            }
+
+            //Hide the tortoise
+            self.hideTortoise()
+
+}
+
+    }
+
+    func semiCircle () {
+
+        self.penDown()
+        self.curve(withSides: 20, withSize: 10, drawingSides: 11)
+        self.right(10)
+    }
 }
