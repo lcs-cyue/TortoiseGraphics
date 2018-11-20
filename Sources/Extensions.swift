@@ -250,7 +250,18 @@ public extension Tortoise {
     func semiCircle () {
 
         self.penDown()
-        self.curve(withSides: 20, withSize: 10, drawingSides: 11)
+        self.curve(withSides: 20, withSize: 11, drawingSides: 10)
         self.right(10)
+    }
+
+    func drawTriangle () {
+
+        self.penDown()
+        self.forward(12)
+        self.right(120)
+        self.forward(12)
+        self.right(120)
+        self.forward(12)
+
     }
 }

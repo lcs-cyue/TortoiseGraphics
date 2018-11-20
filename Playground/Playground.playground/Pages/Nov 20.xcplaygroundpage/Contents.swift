@@ -4,7 +4,7 @@ import CoreGraphics
 
 let myFrame = CGRect(x: 0, y: 0, width: 500, height: 500)
 let canvas = PlaygroundCanvas(frame: myFrame)
-canvas.frameRate = 30
+canvas.frameRate = 300
 canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
@@ -25,13 +25,82 @@ canvas.drawing { t in
         t.setH(-70)
     }
     
+    t.penDown()
+    t.forward(2)
     t.setH(0)
+    t.penDown()
+    t.forward(25)
+    t.semiCircle()
+    t.setH(-180)
+    t.penDown()
+    t.forward(45)
+    
+    t.setH(55)
     t.penDown()
     t.forward(8)
     t.semiCircle()
-    t.setH(-180)
+    t.setH(-135)
+    t.penDown()
     t.forward(8)
     
+    t.setH(120)
+    t.penDown()
+    t.forward(50)
     
+    t.penUp()
+    t.goto(3, 120)
+    t.setH(-40)
+    t.right(-50)
+    t.right(198)
+   
+    
+    for _ in 1...2 {
+        t.right(25)
+        t.semiCircle()
+        t.setH(80)
+    }
+    
+    t.penUp()
+    t.goto(65, 117)
+    t.penDown()
+    t.penColor(.pink)
+    t.curve(withSides: 10, withSize: 7, drawingSides: 10)
+    t.penUp()
+    t.goto(1, 185)
+    t.penDown()
+    t.curve(withSides: 10, withSize: 7, drawingSides: 10)
+    
+    t.penDown()
+    t.penSize(1)
+    t.penColor(.black)
+    
+    t.penUp()
+    t.goto(2, 204)
+    t.setH(35)
+    t.drawTriangle()
+    
+    t.penUp()
+    t.goto(-27, 18)
+    t.drawTriangle()
+    t.penUp()
+    t.goto(-10, 94)
+    t.drawTriangle()
+    
+    t.penUp()
+    t.goto(88, 140)
+    t.setH(70)
+    t.drawTriangle()
+    
+    t.penUp()
+    t.goto(15, 80)
+    t.penDown()
+    t.penSize(2)
+    t.penColor(.pink)
+    t.setH(90)
+    t.curve(withSides: 20, withSize: 15, drawingSides: 5)
+    t.penDown()
+    t.curve(withSides: 10, withSize: 5, drawingSides: 5)
+    
+    t.hideTortoise()
 }
 
