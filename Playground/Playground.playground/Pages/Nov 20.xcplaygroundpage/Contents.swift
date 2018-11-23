@@ -97,10 +97,27 @@ canvas.drawing { t in
     t.penSize(2)
     t.penColor(.pink)
     t.setH(90)
-    t.curve(withSides: 20, withSize: 15, drawingSides: 5)
+    t.curve(withSides: 20, withSize: 10, drawingSides: 4)
     t.penDown()
-    t.curve(withSides: 10, withSize: 5, drawingSides: 5)
+    t.left(70)
+    t.curve(withSides: 20, withSize: 9, drawingSides: 11)
+    t.left(70)
+    t.penDown()
+    t.curve(withSides: 20, withSize: 9, drawingSides: 8)
+    
+    t.goto(100, 220)
+    t.setH(65)
+    t.penDown()
+    t.curve(withSides: 20, withSize: 7, drawingSides:10)
+    t.penDown()
+    t.curve(withSides: 40, withSize: 18, drawingSides:3)
+    t.penDown()
+    t.left(300)
+    t.curve(withSides: 40, withSize: 16, drawingSides:3)
+    t.penDown()
+    t.curve(withSides: 20, withSize: 7, drawingSides:10)
     
     t.hideTortoise()
+    
 }
 
