@@ -4,7 +4,7 @@ import CoreGraphics
 
 let myFrame = CGRect(x: 0, y: 0, width: 500, height: 500)
 let canvas = PlaygroundCanvas(frame: myFrame)
-canvas.frameRate = 300
+canvas.frameRate = 100
 canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
@@ -105,6 +105,8 @@ canvas.drawing { t in
     t.penDown()
     t.curve(withSides: 20, withSize: 9, drawingSides: 8)
     
+    t.beginFill()
+    t.fillColor(.cyan)
     t.goto(100, 220)
     t.setH(65)
     t.penDown()
@@ -116,6 +118,8 @@ canvas.drawing { t in
     t.curve(withSides: 40, withSize: 16, drawingSides:3)
     t.penDown()
     t.curve(withSides: 20, withSize: 7, drawingSides:10)
+    t.endFill()
+    
     
     t.hideTortoise()
     
