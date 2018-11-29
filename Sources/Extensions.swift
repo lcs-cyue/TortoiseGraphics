@@ -18,7 +18,6 @@ public extension Tortoise {
     func trapezoid(withSize size: Double) {
 
         self.penDown()
-        self.penColor(.black)
         self.right(30)
         self.forward(50)
         self.right(240)
@@ -263,5 +262,97 @@ public extension Tortoise {
         self.right(120)
         self.forward(12)
 
+    }
+
+    func drawRabbit () {
+
+        self.right(67)
+
+        self.penDown()
+        self.penSize(3)
+        self.beginFill()
+        self.fillColor(.black)
+        self.curve(withSides: 30, withSize: 10, drawingSides: 30)
+        self.endFill()
+
+        self.beginFill()
+        self.fillColor(.black)
+        self.left(100)
+        self.back(20)
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+
+        self.setH(120)
+        self.forward(40)
+        self.setH(0)
+        self.forward(40)
+
+        self.setH(20)
+        self.beginFill()
+        self.fillColor(.black)
+
+        self.back(20)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(10)
+        self.penDown()
+        self.left(20)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+
+    }
+
+    func weave () {
+        self.penDown()
+
+        for _ in 1...8 {
+
+            for _ in 1...4 {
+
+                self.forward(60)
+                self.penUp()
+                self.right(90)
+                self.forward(10)
+                self.left(90)
+                self.penDown()
+                self.back(60)
+                self.right(90)
+                self.forward(10)
+
+            }
+
+            self.right(45)
+            self.forward(60)
+        }
     }
 }
