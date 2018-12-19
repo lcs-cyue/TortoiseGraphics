@@ -13,20 +13,8 @@ canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
 canvas.drawing { t in
-    
-    for _ in 1...3 {
         
-        t.weave()
-        t.right(90)
-        t.penUp()
-        t.forward(5)
-        t.left(90)
-        
-    } 
-    for _ in 1...3 {
-        
-        t.penUp()
-        t.forward(5)
-        t.weave()
-    }
+        t.penDown()
+        t.weave(scaleFactor:1.3)
+
 }
