@@ -264,19 +264,22 @@ public extension Tortoise {
 
     }
 
-    func drawRabbit () {
+    func drawRabbit(using thisColor: Color) {
 
+        print("At start \(self.heading)")
+        self.setHeading(0)
         self.right(67)
 
         self.penDown()
         self.penSize(3)
+        self.penColor(thisColor)
         self.beginFill()
-        self.fillColor(.black)
+        self.fillColor(thisColor)
         self.curve(withSides: 30, withSize: 10, drawingSides: 30)
         self.endFill()
 
         self.beginFill()
-        self.fillColor(.black)
+        self.fillColor(thisColor)
         self.left(100)
         self.back(20)
         self.setH(-10)
@@ -307,7 +310,77 @@ public extension Tortoise {
 
         self.setH(20)
         self.beginFill()
-        self.fillColor(.black)
+        self.fillColor(thisColor)
+
+        self.back(20)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(10)
+        self.penDown()
+        self.left(20)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+        print("At end \(self.heading)")
+
+    }
+
+    func drawpinkRabbit () {
+
+        self.right(67)
+
+        self.penDown()
+        self.penSize(3)
+        self.penColor(.pink)
+        self.beginFill()
+        self.fillColor(.pink)
+        self.curve(withSides: 30, withSize: 10, drawingSides: 30)
+        self.endFill()
+
+        self.beginFill()
+        self.fillColor(.pink)
+        self.left(100)
+        self.back(20)
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+
+        self.setH(120)
+        self.forward(40)
+        self.setH(0)
+        self.forward(40)
+
+        self.setH(20)
+        self.beginFill()
+        self.fillColor(.pink)
 
         self.back(20)
         self.penDown()
@@ -332,27 +405,180 @@ public extension Tortoise {
 
     }
 
-    func weave () {
+    func weave (scaleFactor: Double = 1.0) {
         self.penDown()
 
         for _ in 1...8 {
 
             for _ in 1...4 {
 
-                self.forward(60)
+                self.forward(60 * scaleFactor)
                 self.penUp()
                 self.right(90)
-                self.forward(10)
+                self.forward(10 * scaleFactor)
                 self.left(90)
                 self.penDown()
-                self.back(60)
+                self.back(60 * scaleFactor)
                 self.right(90)
-                self.forward(10)
+                self.forward(10 * scaleFactor)
 
             }
 
             self.right(45)
-            self.forward(60)
+            self.forward(60 * scaleFactor)
         }
+    }
+
+    func drawYellowRabbit () {
+
+        self.right(67)
+
+        self.penDown()
+        self.penSize(3)
+        self.penColor(.yellow)
+        self.beginFill()
+        self.fillColor(.yellow)
+        self.curve(withSides: 30, withSize: 10, drawingSides: 30)
+        self.endFill()
+
+        self.beginFill()
+        self.fillColor(.yellow)
+        self.left(100)
+        self.back(20)
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+
+        self.setH(120)
+        self.forward(40)
+        self.setH(0)
+        self.forward(40)
+
+        self.setH(20)
+        self.beginFill()
+        self.fillColor(.yellow)
+
+        self.back(20)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(10)
+        self.penDown()
+        self.left(20)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+    }
+
+    func drawLightyellowRabbit () {
+
+        self.right(67)
+
+        self.penDown()
+        self.penSize(3)
+        self.penColor(.yellow)
+        self.beginFill()
+        self.fillColor(.yellow)
+        self.curve(withSides: 30, withSize: 10, drawingSides: 30)
+        self.endFill()
+
+        self.beginFill()
+        self.fillColor(.yellow)
+        self.left(100)
+        self.back(20)
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(-10)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+
+        self.setH(120)
+        self.forward(40)
+        self.setH(0)
+        self.forward(40)
+
+        self.setH(20)
+        self.beginFill()
+        self.fillColor(.yellow)
+
+        self.back(20)
+        self.penDown()
+        self.left(30)
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 10, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 30, drawingSides: 4)
+
+        self.setH(10)
+        self.penDown()
+        self.left(20)
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.penDown()
+        self.curve(withSides: 10, withSize: 4, drawingSides: 5)
+        self.right(-20)
+        self.penDown()
+        self.curve(withSides: 40, withSize: 10, drawingSides: 4)
+        self.endFill()
+
+    }
+
+    func randomTravel() {
+
+        for _ in 1...50 {
+
+            // Turn a bit
+            let turn = self.random(20) - 10
+            self.left(turn)
+
+            // Draw a random line length
+            let distance = self.random(10)
+            self.forward(distance)
+
+        }
+
     }
 }
