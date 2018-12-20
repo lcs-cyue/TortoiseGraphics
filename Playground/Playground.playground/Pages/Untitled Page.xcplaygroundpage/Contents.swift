@@ -8,12 +8,13 @@ import CoreGraphics
 
 let myFrame = CGRect(x: 0, y: 0, width: 800, height: 600)
 let canvas = PlaygroundCanvas(frame: myFrame)
-canvas.frameRate = 200
-canvas.color = .white
+canvas.frameRate = 90
+canvas.color = .yellow
 PlaygroundPage.current.liveView = canvas
 
 canvas.drawing { t in
-    
+
+
     t.penSize(3)
     t.penColor(.pink)
     t.penUp()
