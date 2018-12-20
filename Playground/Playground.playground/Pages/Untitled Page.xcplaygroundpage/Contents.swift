@@ -90,6 +90,33 @@ canvas.drawing { t in
     t.curve(withSides: 20, withSize: 1.6, drawingSides: 20)
     t.endFill()
     
+    //nose
+    t.goto(17, -46)
+    t.setHeading(90)
+    t.penDown()
+    //fillcolor
+    t.beginFill()
+    t.fillColor(.pink)
+    t.forward(9)
+    t.right(135)
+    t.penDown()
+    t.forward(8)
+    t.right(90)
+    t.penDown()
+    t.forward(8)
+    t.endFill()
+    
+    //mouth
+    t.penUp()
+    t.goto(11,-55)
+    t.penDown()
+    t.curve(withSides: -10, withSize: -4, drawingSides: 5)
+    
+    t.penUp()
+    t.goto(34, -55)
+    t.setHeading(45)
+    t.penDown()
+    t.curve(withSides: 10, withSize: -4, drawingSides: 5)
     
     
     t.hideTortoise()
