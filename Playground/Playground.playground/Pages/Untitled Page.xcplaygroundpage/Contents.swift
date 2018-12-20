@@ -13,6 +13,9 @@ canvas.color = .white
 PlaygroundPage.current.liveView = canvas
 
 canvas.drawing { t in
+    
+    t.penSize(3)
+    t.penColor(.pink)
     t.penUp()
     t.back(100)
     t.penDown()
@@ -38,5 +41,59 @@ canvas.drawing { t in
     t.left(64)
     t.penDown()
     t.curve(withSides: 38, withSize: 10, drawingSides: 13)
+    
+    //connect the face
+    t.penDown()
+    t.right(5)
+    t.penDown()
+    t.left(10)
+    t.curve(withSides: 70, withSize: 10, drawingSides: 6)
 
+    //eyebrows
+    t.goto(-15, -15)
+    t.penDown()
+    t.beginFill()
+    t.fillColor(.pink)
+    t.setHeading(125)
+    t.forward(30)
+    
+    t.right(157)
+    t.forward(27)
+    t.setHeading(7)
+    t.forward(12)
+    
+    
+    t.penUp()
+    t.endFill()
+
+    
+    t.goto(34, -30)
+    t.setHeading(55)
+    t.penDown()
+    t.penSize(5)
+    t.forward(16)
+    
+    //eyes
+    t.penUp()
+    t.goto(-3, -40)
+    t.beginFill()
+    t.fillColor(.pink)
+    t.penDown()
+    t.penSize(3)
+    t.curve(withSides: 20, withSize: 1.6, drawingSides: 20)
+    
+    t.penUp()
+    t.setHeading(87)
+    t.forward(43)
+    
+    t.penDown()
+    t.curve(withSides: 20, withSize: 1.6, drawingSides: 20)
+    t.endFill()
+    
+    
+    
+    t.hideTortoise()
+    
+    
+    
 }
