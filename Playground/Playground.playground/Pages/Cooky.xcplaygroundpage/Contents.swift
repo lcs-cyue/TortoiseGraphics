@@ -13,8 +13,8 @@ canvas.color = .yellow
 PlaygroundPage.current.liveView = canvas
 
 canvas.drawing { t in
-
-
+  
+ 
     t.penSize(3)
     t.penColor(.pink)
     t.penUp()
